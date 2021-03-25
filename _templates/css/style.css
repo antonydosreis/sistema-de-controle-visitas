@@ -1,0 +1,351 @@
+* {
+  margin: 0;
+  padding: 0;
+  font: inherit;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box; }
+
+body {
+  line-height: 1;
+  font-size: 1em;
+  font-family: Arial, Helvetica, sans-serif; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+.content {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 10px; }
+
+.responsive_table {
+  overflow-x: auto; }
+
+#responsive_menu {
+  display: none;
+  position: fixed;
+  background: #fff;
+  top: 0;
+  left: 0;
+  width: 100%;
+  text-align: center;
+  padding: 10px;
+  height: 100%; }
+  #responsive_menu a {
+    display: block;
+    width: 100%;
+    text-decoration: none;
+    background: #666;
+    padding: 3px 7px;
+    margin-top: 10px;
+    color: #fff; }
+    #responsive_menu a.active {
+      background: #eee;
+      color: #000; }
+    #responsive_menu a:last-child, #responsive_menu a:nth-child(8) {
+      background: none;
+      color: #000; }
+    #responsive_menu a:first-child {
+      background: none;
+      color: #000;
+      font-size: 1.5em;
+      text-align: right; }
+
+.modal {
+  display: none;
+  position: fixed;
+  background: #ddd;
+  border: 1px solid #bbb;
+  padding: 10px;
+  text-align: center;
+  width: 150px;
+  right: calc(50% - 75px);
+  height: 70px;
+  top: calc(50% - 35px); }
+  .modal input {
+    padding: 3px 7px;
+    margin-top: 5px; }
+
+body > header {
+  background: #464646;
+  color: white; }
+  body > header img {
+    display: block;
+    margin: 0 auto;
+    padding: 50px 0 20px; }
+  body > header nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 0; }
+    body > header nav h1 {
+      font-size: 3em;
+      font-weight: 700; }
+    body > header nav .action {
+      display: flex;
+      font-size: 0.8em; }
+      body > header nav .action a {
+        text-decoration: none;
+        color: #fff;
+        margin-left: 10px; }
+        body > header nav .action a:last-child {
+          display: none;
+          width: 30px;
+          height: 30px;
+          background: url(../img/ico_bars.png) no-repeat scroll 7px 7px;
+          filter: invert(1); }
+  body > header .tabs {
+    display: flex; }
+    body > header .tabs a {
+      font-size: 0.85em;
+      background: #666;
+      border-top: 1px solid #777;
+      margin-right: 10px;
+      padding: 7px 15px;
+      text-decoration: none;
+      color: #fff; }
+      body > header .tabs a.active {
+        background: #eee;
+        color: #000; }
+
+.opcoes {
+  background: #eee;
+  padding: 10px 0;
+  border-bottom: 1px solid #ccc; }
+  .opcoes .content {
+    display: flex; }
+  .opcoes a {
+    background: #ddd;
+    display: inline-block;
+    color: #000;
+    text-decoration: none;
+    font-size: 0.8em;
+    border: 1px solid #ccc;
+    padding: 5px 15px;
+    margin-right: 5px; }
+    .opcoes a:hover {
+      background: #eee;
+      cursor: pointer; }
+
+main {
+  padding-bottom: 100px; }
+  main h2 {
+    background-color: #eee;
+    border: 1px solid #ccc;
+    margin: 20px 0;
+    padding: 10px;
+    font-size: 1.5em;
+    font-weight: bold;
+    color: #666; }
+  main #search {
+    width: 100%;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    padding: 5px 10px 5px 30px;
+    background: url(../img/ico_search.png) no-repeat scroll 7px 7px; }
+  main table {
+    border: 1px solid #ccc;
+    width: 100%;
+    white-space: nowrap; }
+    main table tr {
+      background: #eee; }
+      main table tr td, main table tr th {
+        border-bottom: 1px solid #ccc;
+        padding: 5px 10px;
+        font-size: 0.8em; }
+      main table tr th {
+        text-align: left;
+        text-transform: uppercase;
+        font-size: 0.8em;
+        font-weight: bold; }
+      main table tr .edit {
+        background: url(../img/ico_editar.png); }
+      main table tr .exclude {
+        background: url(../img/ico_excluir.png); }
+      main table tr .edit, main table tr .exclude {
+        opacity: 0;
+        background-repeat: no-repeat;
+        display: block;
+        float: right;
+        width: 12px;
+        height: 12px;
+        margin: 0 5px 0 0; }
+      main table tr:hover {
+        background: #fff; }
+        main table tr:hover .edit, main table tr:hover .exclude {
+          opacity: 1; }
+  main form h3 {
+    text-transform: uppercase;
+    font-size: 0.8em;
+    font-weight: bold;
+    width: 100%; }
+  main form fieldset {
+    background-color: #eee;
+    border: 1px solid #ccc;
+    margin: 20px 0;
+    padding: 10px;
+    display: flex;
+    flex-wrap: wrap; }
+    main form fieldset label {
+      flex-basis: 20%;
+      text-align: right;
+      padding-right: 10px;
+      margin-top: 15px; }
+    main form fieldset input, main form fieldset select, main form fieldset button {
+      flex-basis: 80%;
+      height: 25px;
+      padding: 2px 10px;
+      margin-top: 10px;
+      border: 1px solid #ccc; }
+    main form fieldset small {
+      margin-left: 20%;
+      color: #666;
+      flex-basis: 80%;
+      font-size: 0.7em;
+      margin-top: 2px; }
+  main form .actions {
+    display: flex;
+    justify-content: flex-end; }
+    main form .actions a, main form .actions input {
+      display: inline-block;
+      padding: 5px 10px;
+      border: 1px solid #ccc;
+      margin-left: 10px;
+      color: #000;
+      text-decoration: none; }
+      main form .actions a:hover, main form .actions input:hover {
+        cursor: pointer; }
+    main form .actions .exclude_button {
+      background: red;
+      border: 1px solid DarkRed;
+      color: #fff; }
+    main form .actions input {
+      border: 1px solid DarkGreen;
+      color: #fff;
+      background: ForestGreen; }
+      main form .actions input:hover {
+        cursor: pointer; }
+
+.login {
+  max-width: 320px;
+  margin: 20px auto 10px; }
+  .login h1 {
+    font-size: 1.5em;
+    text-align: center;
+    margin: 10px 0 20px;
+    flex-basis: 100%; }
+  .login fieldset {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 10px 10px 20px; }
+    .login fieldset label {
+      flex-basis: 25%;
+      margin-top: 15px; }
+    .login fieldset input {
+      flex-basis: 75%;
+      margin-top: 10px;
+      padding: 3px 6px; }
+  .login > input {
+    width: 100%;
+    padding: 3px 7px;
+    background-color: ForestGreen;
+    border: 1px solid DarkGreen;
+    color: #fff; }
+    .login > input:hover {
+      cursor: pointer; }
+
+footer {
+  background: #eee;
+  padding: 10px 0;
+  margin-top: 20px;
+  border-top: 1px solid #ddd;
+  text-align: center;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  font-size: 0.8em; }
+
+.warning {
+  position: fixed;
+  color: #fff;
+  padding: 5px 20px;
+  bottom: 30px;
+  left: 0;
+  width: 100%; }
+  .warning.error {
+    background: red; }
+
+.chosen-container, .chosen-container-multi {
+  margin-top: 10px; }
+
+@media print {
+  .no-print, .no-print * {
+    display: none !important; } }
+@media only screen and (max-width: 768px) {
+  body > header nav {
+    flex-wrap: wrap;
+    padding: 10px 0; }
+    body > header nav h1 {
+      font-size: 1.2em;
+      flex-basis: calc(100% - 50px); }
+    body > header nav .action {
+      flex-basis: 30px; }
+      body > header nav .action a {
+        display: none; }
+        body > header nav .action a:last-child {
+          display: block; }
+  body > header .tabs {
+    display: none; }
+
+  main h2 {
+    margin: 10px 0;
+    font-size: 1em; }
+  main form fieldset label {
+    flex-basis: 100%;
+    text-align: left;
+    padding: 0 0 0 10px;
+    margin-top: 10px;
+    font-size: 0.8em;
+    color: #555; }
+  main form fieldset input, main form fieldset select, main form fieldset button {
+    flex-basis: 100%;
+    margin-top: 3px; }
+  main .opcoes {
+    padding: 2px 0; }
+    main .opcoes .content {
+      flex-wrap: wrap; }
+    main .opcoes a {
+      flex-basis: 100%;
+      display: block;
+      margin: 2px 0; } }
+.show {
+  animation: show 0.5s forwards;
+  -webkit-animation: show 0.5s forwards; }
+
+.hide {
+  animation: hide 0.5s forwards;
+  -webkit-animation: hide 0.5s forwards; }
+
+@keyframes show {
+  0% {
+    opacity: 0;
+    transform: translateY(-20%); }
+  90% {
+    opacity: 1;
+    transform: translateY(0); } }
+@keyframes hide {
+  0% {
+    opacity: 1;
+    transform: translateY(0); }
+  90% {
+    opacity: 0;
+    transform: translateY(-20%); } }
+@keyframes aparecer {
+  100% {
+    opacity: 1;
+    transform: translateX(0); } }
+
+/*# sourceMappingURL=style.css.map */
